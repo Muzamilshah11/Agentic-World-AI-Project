@@ -1,0 +1,27 @@
+[project]
+name = "my-agent2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Muzamilshah11", email = "muzamils782@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "chainlit>=2.5.5",
+    "openai-agents[litellm]>=0.0.13",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+my-agent2 = "my_agent2:main"
+basic = "my_agent2.main:basic_main"
+tool = "my_agent2.main:tool_main"
+handoff = "my_agent2.main:handoff_main"
+agent-as-tool = "my_agent2.main:agent_main"
+
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
